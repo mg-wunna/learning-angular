@@ -24,6 +24,15 @@
           </tr>
         </tbody>
       </table>
+
+      <ul>
+        <li ng-repeat="list in lists">
+          {{ list.name }}
+          <ul>
+            <li ng-repeat="item in list.items">{{ item }}</li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
