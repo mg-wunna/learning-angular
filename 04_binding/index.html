@@ -17,6 +17,18 @@
       <input type="text" ng-model="otherMessage" />
       <br /><br />
       <p>{{ otherMessage }}</p>
+
+      <div>
+        <span>Name:</span>
+        <input type="text" ng-model="user.name" />
+      </div>
+      <div>
+        <span>Age:</span>
+        <input type="number" ng-model="user.age" />
+      </div>
+
+      <div>Name: {{ user.name }}</div>
+      <div>Age: {{ user.age }}</div>
     </div>
   </body>
 </html>
