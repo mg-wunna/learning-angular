@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../00_assets/angular.js"></script>
+    <script src="./script.js"></script>
+  </head>
+
+  <body ng-app="myModule">
+    <div ng-controller="myController">
+      <input type="text" ng-model="message" />
+      <br /><br />
+      <p>{{ message }}</p>
+      <br /><br />
+      <input type="text" ng-model="otherMessage" />
+      <br /><br />
+      <p>{{ otherMessage }}</p>
+    </div>
+  </body>
+</html>
