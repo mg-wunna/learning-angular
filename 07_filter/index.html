@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../00_assets/angular.js"></script>
+    <script src="./script.js"></script>
+  </head>
+
+  <body ng-app="myModule">
+    <div ng-controller="myController">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date of birth</th>
+            <th>Gender</th>
+            <th>Salary ( Number )</th>
+            <th>Salary ( Currency )</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="employee in employees">
+            <td>{{ employee.name | uppercase }}</td>
+            <td>{{ employee.dateOfBirth | date:"dd-mm-yyyy" }}</td>
+            <td>{{ employee.gender | lowercase }}</td>
+            <td>{{ employee.salary | number:2 }}</td>
+            <td>{{ employee.salary | currency:"Ks":0 }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
