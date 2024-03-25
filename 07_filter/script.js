@@ -23,4 +23,6 @@ app.controller("myController", function ($scope) {
       salary: 18000,
     },
   ];
+
+  $scope.limit = 3;
 });

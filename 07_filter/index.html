@@ -10,6 +10,10 @@
 
   <body ng-app="myModule">
     <div ng-controller="myController">
+      <div>
+        Row limit :
+        <input type="number" step="1" min="1" max="3" ng-model="limit" />
+      </div>
       <table>
         <thead>
           <tr>
@@ -21,7 +25,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="employee in employees">
+          <tr ng-repeat="employee in employees | limitTo:limit">
             <td>{{ employee.name | uppercase }}</td>
             <td>{{ employee.dateOfBirth | date:"dd-mm-yyyy" }}</td>
             <td>{{ employee.gender | lowercase }}</td>
