@@ -26,10 +26,13 @@
       </table>
 
       <ul>
-        <li ng-repeat="list in lists">
-          {{ list.name }}
+        <li ng-repeat="list in lists" ng-init="parentIndex = $index">
+          {{ list.name }} - Index = {{ $index }}
           <ul>
-            <li ng-repeat="item in list.items">{{ item }}</li>
+            <li ng-repeat="item in list.items">
+              <!-- {{ item }} - ParentIndex = {{ $parent.$index }}, Index = {{ $index }} -->
+              {{ item }} - ParentIndex = {{ parentIndex }}, Index = {{ $index }}
+            </li>
           </ul>
         </li>
       </ul>
