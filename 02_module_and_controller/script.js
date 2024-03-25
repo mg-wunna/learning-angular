@@ -3,5 +3,9 @@
 const app = angular.module("myModule", []);
 
 app.controller("myController", function ($scope) {
-  $scope.message = "Hello World";
+  $scope.employee = {
+    name: "Wunna",
+    age: 27,
+    gender: "male",
+  };
 });
