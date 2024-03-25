@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../00_assets/angular.js"></script>
+    <script src="./script.js"></script>
+  </head>
+
+  <body ng-app="myModule">
+    <div ng-controller="myController">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Like</th>
+            <th>Dislike</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="technology in technologies">
+            <td>{{ technology.name }}</td>
+            <td>{{ technology.like }}</td>
+            <td>{{ technology.dislike }}</td>
+            <td>
+              <button ng-click="increaseLike(technology);">Like</button>
+              <button ng-click="increaseDislike(technology);">Dislike</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
